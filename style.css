@@ -1,0 +1,153 @@
+/* Set height to 100% for body and html to enable the background image to cover the whole page: */
+body, html {
+    height: 100%;
+    margin:0;
+    padding: 0;
+  }
+a{
+    text-decoration: none;
+}
+p {
+    text-align: center;
+}   
+  .bgimg {
+    /* Background image */
+    background-image: url('bg.jpg');
+    /* Full-screen */
+    height: 100%;
+    /* Center the background image */
+    background-position: center;
+    /* Scale and zoom in the image */
+    background-size: cover;
+    /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+    position: relative;
+    /* Add a white text color to all elements inside the .bgimg container */
+    color: white;
+    /* Add a font */
+    font-family: "Courier New", Courier, monospace;
+    /* Set the font-size to 25 pixels */
+    font-size: 25px;
+  }
+  
+  /* Position text in the top-left corner */
+  .topleft {
+    position: absolute;
+    top: 0;
+    left: 16px;
+  }
+  
+  /* Position text in the bottom-left corner */
+  .bottomleft {
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+  }
+  .topright {
+    position: absolute;
+    bottom: 0;
+    right: 16px;
+    margin-top: 25px;
+  }
+.topright.playing .icon-pause {
+display: inline-block;
+}
+
+.topright.playing .icon-play {
+display: none;
+}
+.topright .icon-pause {
+    display: none;
+}
+  
+.none-mute{    
+    display: none;
+    cursor: pointer;
+}
+.mute{
+
+    cursor: pointer;
+}
+  
+.celender-right{
+    position: absolute;
+    top: 20px;
+    right: 16px;
+    display: block;
+}
+  /* Position text in the middle */
+  .middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-shadow: 0 3px 3px #000000;
+  }
+  .line{
+    background: #fff;
+    width: 300px;
+    height: 5px;
+    margin: 0 auto;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+  /* Style the <hr> element */
+  hr {
+    margin: auto;
+    width: 40%;
+  }
+
+/* celender */
+table.thang {
+    width: 290px;
+    height: 300px;
+}
+.ngaythang {
+    background-color: #fdfdfd;
+}
+.thang {
+    font-size: 11pt 9 !important;
+    padding: 0 !important;
+    font-family: "Courier New", Courier, monospace !important;
+}
+.tenthang {
+    background-color: #ff7272 !important;
+}
+.navi-l, .navi-r{
+    background-color: #f9f802 !important;
+}
+.toggle-cld{
+    display: none;
+}
+/*-------------------- mobile------------------- */
+@media(max-width:450px){
+    .celender-right {   
+        top: 8%;
+        right: unset;
+        display: none;
+    }
+
+    .middle {
+        position: unset;
+        transform: unset;
+        padding-top: 50%;
+    }
+    .topright{
+        top: 0;
+    }
+    .toggle-cld {
+        background: transparent;
+        display: block;
+        color: #fff;
+        border: none;
+        font-size: 25px;
+        position: absolute;
+        cursor: pointer;
+        top: 19px;
+        left: 55%;
+    }
+    table.thang {
+        width: 100%;
+
+    }
+}
